@@ -135,7 +135,6 @@ buyButton.addEventListener('click', () => {
 
 submitButton.addEventListener('click', (event) => {
   event.preventDefault();
-  console.log(typeof(postOffice), postOffice);
   if(!isNaN(postOfficeNumber)) {
     hideEverything();
     displayOrderInfo();
