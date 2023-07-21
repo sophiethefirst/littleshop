@@ -4,16 +4,68 @@
   <title>Menu</title>
 </head>
 <body>
-  <div id="categories">
-    <h2>Categories</h2>
-    <ul id="categoryList">
-    </ul>
-  </div>
-  <div id="products">
-    <ul id="productList"></ul>
-  </div>
-  <div id="productInfo">
-    <p id="productName"></p>
+  <div id="wrapper">
+    <div id="categories">
+      <h2>Categories</h2>
+      <ul id="categoryList">
+      </ul>
+    </div>
+    <div id="products">
+      <ul id="productList"></ul>
+    </div>
+    <div id="productInfo">
+      <p id="productName"></p>
+    </div>
+    <form id="form" method="GET">
+      
+      <div id="full-name-container" class="form-containers">
+        <label for="full-name">Name:* </label>
+        <input id="full-name" name="full-name" type="text" required>
+      </div>
+      <br>
+
+      <div id="city-container" class="form-containers">
+        <label for="city">City: </label>
+        <select name="city" id="city" required>
+            <option value="Kyiv">Kyiv</option>
+            <option value="Kharkiv">Kharkiv</option>
+            <option value="Dnipro">Dnipro</option>
+            <option value="Odesa">Odesa</option>
+            <option value="Lviv">Lviv</option>
+        </select>
+      </div>
+      <br>
+
+      <div id="post-office-container" class="form-containers">
+        <label for="post-office">Nova Poshta PO number:* </label>
+        <input id="post-office" name="post-office" type="text" required>
+      </div>
+      <br>
+
+      <div id="payment-container" class="form-containers">
+        <p>Choose payment option:</p>
+
+        <label for="postpaid">Postpaid</label>
+        <input id="postpaid" name="payment" value="postpaid" type="radio" checked>
+
+        <label for="card-payment">Card</label>
+        <input id="card-payment" name="payment" value="card" type="radio">
+      </div>
+      <br>
+
+      <div id="product-quantity-container" class="form-containers">
+        <label for="product-quantity">Quantity of products (1-20): </label>
+        <input id="product-quantity" name="product-quantity" type="number" min="1" max="20">
+      </div>
+      <br>
+
+      <div id="comment-container" class="form-containers">
+        <label for="user-comment">Comment: </label>
+        <textarea id="user-comment" name="user-comment" cols="10" rows="3"></textarea>
+      </div> 
+      <br>
+      <button type="submit" id="submit-btn">Submit</button>
+    </form>
   </div>
 
   <script type="text/javascript" src="index.js"></script>
